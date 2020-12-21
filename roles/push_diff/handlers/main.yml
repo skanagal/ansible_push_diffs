@@ -1,0 +1,13 @@
+- name: extract diff config
+  set_fact:
+    after_list: "{{myoutput['diff']['after'].split('\n')}}"
+  listen: 'push_config'
+#
+# - name: Print output
+#   debug: var=after_list
+#   listen: 'push_config'
+
+- name: Push the configuration
+  arista.eos.eos_config:
+    lines: "{{after_list}}"
+  listen: 'push_config'

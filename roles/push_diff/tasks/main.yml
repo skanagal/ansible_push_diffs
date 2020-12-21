@@ -1,0 +1,8 @@
+- name: Run a diff
+  arista.eos.eos_config:
+    diff_against: intended
+    intended_config: "{{ lookup('file', 'templates/config_template.cfg') }}"
+    diff_ignore_lines: ['ntp*','username*']
+  register: myoutput
+  diff: yes
+  notify: 'push_config'

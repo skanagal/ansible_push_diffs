@@ -1,0 +1,11 @@
+---
+- hosts: all
+  connection: local
+
+  gather_facts: no
+  no_log: False
+
+  tasks:
+    - name: Push config when there is a diff
+      import_role:
+        name: push_diff
