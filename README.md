@@ -6,13 +6,13 @@ If you are using Ansible to push configuration templates, there can be a situati
 
 ## Config on the switch ##  
 
-`SWITCH(config)#show run | i username
-username random nopassword
-username tester nopassword
+`SWITCH(config)#show run | i username\
+username random nopassword\
+username tester nopassword\
 `
 
 
-`SWITCH(config)#show run | i ntp
-ntp server 192.168.57.3 source Loopback0
+`SWITCH(config)#show run | i ntp\
+ntp server 192.168.57.3 source Loopback0\
 SWITCH(config)#
 ``
