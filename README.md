@@ -15,4 +15,13 @@ username tester nopassword\
 `SWITCH(config)#show run | i ntp\
 ntp server 192.168.57.3 source Loopback0\
 SWITCH(config)#
-``
+`
+
+## Snippet from configuration template ##
+
+cat templates/config_template.config
+
+`ntp server 192.168.100.3 source Loopback0
+<snip>
+username tester nopassword
+`
